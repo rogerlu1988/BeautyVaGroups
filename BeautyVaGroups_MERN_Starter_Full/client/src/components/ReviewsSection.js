@@ -31,24 +31,23 @@ const ReviewsSection = () => (
     <Typography variant="h6" align="center" color="text.secondary" mb={6}>
       See what our satisfied clients have to say about our services and professionals
     </Typography>
-    <Grid container spacing={4} justifyContent="center">
+    <Grid container spacing={6} justifyContent="center">
       {reviews.map((review, idx) => (
         <Grid item xs={12} sm={6} md={4} key={idx}>
-          <Card elevation={4} sx={{ borderRadius: 4, minHeight: 260 }}>
+          <Card elevation={0} sx={{ borderRadius: 4, p: 3, mb: 2, bgcolor: 'secondary.main', boxShadow: '0 4px 24px 0 rgba(0,0,0,0.06)', border: '1px solid #ececec' }}>
             <CardContent>
-              <Avatar sx={{ bgcolor: 'white', color: '#fff', background: review.color, width: 65, height: 65, mb: 2, mx: 'auto', fontWeight: 700, fontSize: 28 }}>
-                {review.name.split(' ').map(n => n[0]).join('')}
-              </Avatar>
-              <Typography variant="h6" fontWeight={600} align="center">{review.name}</Typography>
-              <Typography variant="body2" color="text.secondary" align="center" mb={1}>{review.service}</Typography>
-              <Box display="flex" justifyContent="center" alignItems="center" mb={1}>
-                {[...Array(5)].map((_, i) => (
-                  <StarIcon key={i} sx={{ color: '#ffc107', fontSize: 20 }} />
+              <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
+                <Avatar sx={{ bgcolor: 'primary.main', mr: 2 }}>{review.avatar}</Avatar>
+                <Typography fontWeight={700} sx={{ fontFamily: 'Montserrat, sans-serif', color: 'primary.main' }}>{review.name}</Typography>
+              </Box>
+              <Typography variant="body2" color="text.secondary" fontStyle="italic" mb={1} sx={{ fontFamily: 'Montserrat, sans-serif' }}>
+                {review.text}
+              </Typography>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                {[...Array(review.rating)].map((_, i) => (
+                  <StarIcon key={i} sx={{ color: 'accent.main', fontSize: 20 }} />
                 ))}
               </Box>
-              <Typography variant="body1" align="center" color="text.secondary" fontStyle="italic">
-                "{review.text}"
-              </Typography>
             </CardContent>
           </Card>
         </Grid>

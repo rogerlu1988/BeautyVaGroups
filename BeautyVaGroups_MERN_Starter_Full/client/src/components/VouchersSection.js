@@ -36,14 +36,15 @@ const VouchersSection = () => (
     <Grid container spacing={4} justifyContent="center" sx={{ mt: 4 }}>
       {vouchers.map((voucher, idx) => (
         <Grid item xs={12} sm={6} md={4} key={idx}>
-          <Card elevation={6} sx={{ borderRadius: 4, background: voucher.color, color: 'white', textAlign: 'center', minHeight: 260 }}>
-            <CardContent>
-              <Typography variant="h3" fontWeight={700} mb={2}>{voucher.amount}</Typography>
-              <Typography variant="h5" fontWeight={600} mb={1}>{voucher.title}</Typography>
-              <Typography variant="body1" mb={2}>{voucher.desc}</Typography>
-              <Button variant="contained" color="secondary" sx={{ mt: 2, fontWeight: 700 }}>
-                Use Code: {voucher.code}
-              </Button>
+          <Card elevation={6} sx={{ borderRadius: 4, background: 'white', color: 'black', textAlign: 'center', minHeight: 260, boxShadow: '0 4px 24px 0 rgba(0,0,0,0.06)', border: '1px solid #ececec' }}>
+            <CardContent sx={{ p: 3, mb: 2 }}>
+              <Typography variant="h6" fontWeight={700} mb={1} sx={{ fontFamily: 'Montserrat, sans-serif', color: 'black' }}>
+                {voucher.title}
+              </Typography>
+              <Typography variant="body2" color="text.secondary" mb={2} sx={{ fontFamily: 'Montserrat, sans-serif' }}>
+                {voucher.desc}
+              </Typography>
+              <Button variant="contained" color="primary" sx={{ fontWeight: 600, borderRadius: 2, bgcolor: 'black', color: 'white', '&:hover': { bgcolor: 'black', color: 'white' } }}>Get Voucher</Button>
             </CardContent>
           </Card>
         </Grid>

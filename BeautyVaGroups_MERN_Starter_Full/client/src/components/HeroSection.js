@@ -5,28 +5,78 @@ import SpaIcon from '@mui/icons-material/Spa';
 const HeroSection = () => (
   <Box
     sx={{
-      minHeight: '60vh',
+      minHeight: { xs: '50vh', md: '75vh' },
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      bgcolor: 'linear-gradient(135deg, #fdf2f8 0%, #f0f4f8 100%)',
+      bgcolor: 'secondary.main',
       textAlign: 'center',
-      py: 10,
+      py: { xs: 8, md: 16 },
+      borderBottom: '4px solid #e6e6e6',
     }}
   >
-    <SpaIcon sx={{ fontSize: 60, color: 'primary.main', mb: 2 }} />
-    <Typography variant="h2" component="h1" fontWeight={700} color="primary" gutterBottom>
+    <SpaIcon sx={{ fontSize: 72, color: 'primary.main', mb: 2 }} />
+    <Typography
+      variant="h2"
+      component="h1"
+      fontWeight={700}
+      sx={{
+        color: 'primary.main',
+        fontFamily: 'Montserrat, sans-serif',
+        letterSpacing: 1,
+        mb: 2,
+        fontSize: { xs: 36, md: 56 }
+      }}
+      gutterBottom
+    >
       BeautyVaGroups
     </Typography>
-    <Typography variant="h5" color="text.secondary" mb={4}>
-      Premium Home Services
+    <Typography
+      variant="h5"
+      sx={{
+        color: 'accent.main',
+        fontWeight: 500,
+        fontFamily: 'Montserrat, sans-serif',
+        mb: 4,
+        fontSize: { xs: 18, md: 28 }
+      }}
+    >
+      Premium Home Beauty Services
     </Typography>
-    <Stack direction="row" spacing={2} justifyContent="center">
-      <Button variant="contained" color="primary" size="large">
+    <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} justifyContent="center">
+      <Button
+        variant="contained"
+        color="accent"
+        size="large"
+        sx={{
+          bgcolor: 'accent.main',
+          color: 'secondary.main',
+          fontWeight: 700,
+          px: 5,
+          py: 1.5,
+          borderRadius: 8,
+          fontSize: 20,
+          '&:hover': { bgcolor: 'accent.light', color: 'primary.main' }
+        }}
+      >
         Book Now
       </Button>
-      <Button variant="outlined" color="secondary" size="large">
+      <Button
+        variant="outlined"
+        color="primary"
+        size="large"
+        sx={{
+          borderColor: 'primary.main',
+          color: 'primary.main',
+          fontWeight: 600,
+          px: 5,
+          py: 1.5,
+          borderRadius: 8,
+          fontSize: 20,
+          '&:hover': { bgcolor: 'primary.main', color: 'secondary.main' }
+        }}
+      >
         Learn More
       </Button>
     </Stack>

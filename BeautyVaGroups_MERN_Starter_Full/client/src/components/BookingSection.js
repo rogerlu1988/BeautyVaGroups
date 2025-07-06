@@ -111,9 +111,9 @@ const BookingSection = () => {
       </Typography>
       <Grid container justifyContent="center">
         <Grid item xs={12} md={8}>
-          <Paper elevation={4} sx={{ borderRadius: 4, p: 4 }}>
-            <Typography variant="h5" fontWeight={600} mb={3}>
-              Service Details
+          <Paper elevation={0} sx={{ borderRadius: 4, p: { xs: 2, md: 5 }, bgcolor: 'secondary.main', boxShadow: '0 4px 24px 0 rgba(0,0,0,0.06)', border: '1px solid #ececec' }}>
+            <Typography variant="h5" fontWeight={700} mb={3} sx={{ fontFamily: 'Montserrat, sans-serif', color: 'primary.main', fontSize: { xs: 22, md: 28 } }}>
+              Book Your Service
             </Typography>
             {success && <Alert severity="success" sx={{ mb: 2 }}>{success}</Alert>}
             {error && <Alert severity="error" sx={{ mb: 2 }}>{error}</Alert>}
