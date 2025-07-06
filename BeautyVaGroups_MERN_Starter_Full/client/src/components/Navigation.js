@@ -16,19 +16,20 @@ const Navigation = () => {
   };
 
   return (
-    <AppBar position="static" sx={{ bgcolor: 'primary.main', color: 'secondary.main', boxShadow: 0, borderBottom: '2px solid #e6e6e6', mb: 4 }}>
-      <Toolbar sx={{ justifyContent: 'space-between', px: { xs: 1, md: 6 } }}>
+    <AppBar position="static" sx={{ bgcolor: 'primary.main', color: 'secondary.main', boxShadow: 0, borderBottom: '2px solid #e6e6e6', mb: 4, minHeight: 80 }}>
+      <Toolbar sx={{ justifyContent: 'space-between', alignItems: 'center', px: { xs: 1, md: 6 }, minHeight: 80 }}>
         {/* Logo/Brand */}
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <Typography variant="h5" sx={{ fontWeight: 700, fontFamily: 'Montserrat, sans-serif', letterSpacing: 1 }}>
-            <Button component={Link} to="/" sx={{ color: 'secondary.main', fontWeight: 700, fontSize: 28, p: 0, textTransform: 'none' }}>
-              BeautyVaGroups
-            </Button>
-          </Typography>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+  <img src="/logo-bv.png" alt="BeautyVaGroups Logo" style={{ height: 38, width: 'auto', marginRight: 8, filter: 'drop-shadow(0 2px 4px rgba(230, 190, 46, 0.25))' }} />
+  <Typography variant="h6" sx={{ fontWeight: 700, fontFamily: 'Montserrat, sans-serif', color: '#bfa544', letterSpacing: 1 }}>
+    BeautyVaGroups
+  </Typography>
+</Box>
         </Box>
         {/* Nav Links Centered */}
         <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2 }}>
-          <Button component={Link} to="/" sx={{ color: 'secondary.main', fontWeight: 600 }}>Home</Button>
+          <Button component={Link} to="/" sx={{ color: 'secondary.main', fontWeight: 600, fontSize: 18 }}>Home</Button>
           <Button component={Link} to="/dashboard" sx={{ color: 'secondary.main', fontWeight: 600 }}>Bookings</Button>
           <Button component={Link} to="/services" sx={{ color: 'secondary.main', fontWeight: 600 }}>Services</Button>
         </Box>

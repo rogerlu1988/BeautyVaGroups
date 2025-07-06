@@ -71,3 +71,4 @@ const theme = createTheme({
 });
 
 export default theme;
+export const gold = '#bfa544';

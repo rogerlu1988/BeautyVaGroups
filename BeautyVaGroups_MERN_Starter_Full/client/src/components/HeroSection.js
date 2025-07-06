@@ -5,33 +5,46 @@ import SpaIcon from '@mui/icons-material/Spa';
 const HeroSection = () => (
   <Box
     sx={{
-      minHeight: { xs: '50vh', md: '75vh' },
+      position: 'relative',
+      minHeight: { xs: '55vh', md: '77vh' },
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
       bgcolor: 'secondary.main',
       textAlign: 'center',
-      py: { xs: 8, md: 16 },
+      py: { xs: 10, md: 18 },
       borderBottom: '4px solid #e6e6e6',
+      overflow: 'hidden'
     }}
   >
-    <SpaIcon sx={{ fontSize: 72, color: 'primary.main', mb: 2 }} />
-    <Typography
-      variant="h2"
-      component="h1"
-      fontWeight={700}
-      sx={{
-        color: 'primary.main',
-        fontFamily: 'Montserrat, sans-serif',
-        letterSpacing: 1,
-        mb: 2,
-        fontSize: { xs: 36, md: 56 }
-      }}
-      gutterBottom
-    >
-      BeautyVaGroups
-    </Typography>
+    <Box sx={{
+  position: 'absolute',
+  left: 0,
+  top: 0,
+  width: '100%',
+  height: '100%',
+  zIndex: 0,
+  opacity: 0.08,
+  background: 'url(/logo-bv.png) center/40% no-repeat',
+}} />
+<Typography
+  variant="h2"
+  component="h1"
+  fontWeight={700}
+  sx={{
+    color: '#bfa544',
+    fontFamily: 'Montserrat, sans-serif',
+    letterSpacing: 1,
+    mb: 2,
+    fontSize: { xs: 32, md: 52 },
+    zIndex: 1,
+    position: 'relative'
+  }}
+  gutterBottom
+>
+  Luxury Beauty, Delivered
+</Typography>
     <Typography
       variant="h5"
       sx={{
