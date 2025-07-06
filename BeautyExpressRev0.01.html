@@ -15,12 +15,12 @@
         }
 
         :root {
-            --primary: #bfa46a; /* Luxury gold accent */
-            --secondary: #2c3e50; /* Deep luxury text */
-            --accent: #bfa46a; /* Gold accent */
-            --dark: #181818; /* Deep black for luxury */
-            --light: #fefefe; /* Logo's dominant color */
-            --gray: #bfbfbf;
+            --primary: #ff6b8b;
+            --secondary: #6a5af9;
+            --accent: #42b883;
+            --dark: #2c3e50;
+            --light: #f8f9fa;
+            --gray: #6c757d;
             --success: #28a745;
             --warning: #ffc107;
             --pink: #ff7eb3;
@@ -30,15 +30,10 @@
         }
 
         body {
-            background: var(--light);
+            background: linear-gradient(135deg, #fdf2f8 0%, #f0f4f8 100%);
             color: var(--dark);
             line-height: 1.6;
             overflow-x: hidden;
-        }
-
-        /* Luxury gold accent for headings and highlights */
-        h1, h2, h3, .navbar .logo, .section-title h2 {
-            color: var(--primary);
         }
 
         .container {
@@ -889,7 +884,7 @@
 <li><a href="#about">About</a></li>
                 </ul>
                 <div class="auth-buttons">
-                    <a href="login.html" class="btn btn-outline" style="text-decoration:none;">Log In</a>
+                    <button class="btn btn-outline">Log In</button>
                     <button class="btn btn-primary">Sign Up</button>
                 </div>
             </nav>
@@ -901,7 +896,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Premium Home <span>Beauty & Wellness Services</span></h1>
-                <p style="color:#181818;">Book skilled professionals for all your beauty and wellness needs directly to your home. Experience luxury without leaving your house with our certified experts.</p>
+                <p>Book skilled professionals for all your beauty and wellness needs directly to your home. Experience luxury without leaving your house with our certified experts.</p>
                 <div class="hero-buttons">
                     <button class="btn btn-primary">Book Now</button>
                     <button class="btn btn-outline">View Services</button>
@@ -935,7 +930,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Our Premium Services</h2>
-                <p style="color:#181818;">Choose from our comprehensive range of professional home services delivered by skilled experts</p>
+                <p>Choose from our comprehensive range of professional home services delivered by skilled experts</p>
             </div>
             <div class="services-grid">
                 <!-- Makeup -->
@@ -946,7 +941,7 @@
                     <div class="service-tag">Popular</div>
                     <div class="service-content">
                         <h3>Professional Makeup</h3>
-                        <p style="color:#181818;">Full makeup service with premium products for events, weddings, or special occasions.</p>
+                        <p>Full makeup service with premium products for events, weddings, or special occasions.</p>
                         <div class="price">
                             <div class="amount">$85+</div>
                             <div class="type">Small Project</div>
@@ -961,7 +956,7 @@
                     </div>
                     <div class="service-content">
                         <h3>Therapeutic Massage</h3>
-                        <p style="color:#181818;">Relaxing and therapeutic massage sessions tailored to your needs in your home.</p>
+                        <p>Relaxing and therapeutic massage sessions tailored to your needs in your home.</p>
                         <div class="price">
                             <div class="amount">$120+</div>
                             <div class="type">Big Project</div>
@@ -971,15 +966,15 @@
                 
                 <!-- Hair Services -->
 <div class="service-card">
-    <div class="service-icon acupuncture">
-        <i class="fas fa-bullseye"></i>
+    <div class="service-icon hair">
+        <i class="fas fa-cut"></i>
     </div>
     <div class="service-content">
-        <h3>Acupuncture Therapy</h3>
-        <p style="color:#181818;">Traditional Chinese medicine treatment for pain relief and overall wellness.</p>
+        <h3>Hair Services</h3>
+        <p>Professional haircuts, coloring, blowouts, and styling delivered to your home.</p>
         <div class="price">
-            <div class="amount">$90+</div>
-            <div class="type">Medium Project</div>
+            <div class="amount">$65+</div>
+            <div class="type">Small Project</div>
         </div>
     </div>
 </div>
@@ -992,7 +987,7 @@
     <div class="service-tag">New</div>
     <div class="service-content">
         <h3>Facial Treatment</h3>
-        <p style="color:#181818;">Deep cleansing, rejuvenating facials, and skin therapy for a radiant complexion.</p>
+        <p>Deep cleansing, rejuvenating facials, and skin therapy for a radiant complexion.</p>
         <div class="price">
             <div class="amount">$95+</div>
             <div class="type">Small Project</div>
@@ -1006,10 +1001,25 @@
         <i class="fas fa-water"></i>
     </div>
     <div class="service-content">
-        <h3>Waxing and Threading</h3>
-        <p style="color:#181818;">Gentle and effective waxing for smooth, hair-free skin on any area.</p>
+        <h3>Waxing</h3>
+        <p>Gentle and effective waxing for smooth, hair-free skin on any area.</p>
         <div class="price">
             <div class="amount">$40+</div>
+            <div class="type">Small Project</div>
+        </div>
+    </div>
+</div>
+
+<!-- Threading -->
+<div class="service-card">
+    <div class="service-icon threading" style="background: linear-gradient(135deg, #8a2be2 0%, #b39ddb 100%);">
+        <i class="fas fa-grip-lines"></i>
+    </div>
+    <div class="service-content">
+        <h3>Threading</h3>
+        <p>Precision eyebrow and facial threading for perfectly shaped brows and smooth skin.</p>
+        <div class="price">
+            <div class="amount">$25+</div>
             <div class="type">Small Project</div>
         </div>
     </div>
@@ -1021,8 +1031,8 @@
         <i class="fas fa-cut"></i>
     </div>
     <div class="service-content">
-        <h3>Body Painting</h3>
-        <p style="color:#181818;">Creative and professional body painting for special events, performances, or personal expression.</p>
+        <h3>Hair Styling</h3>
+        <p>Professional hair cutting, coloring, and styling services at your home.</p>
         <div class="price">
             <div class="amount">$65+</div>
             <div class="type">Small Project</div>
@@ -1037,7 +1047,7 @@
                     </div>
                     <div class="service-content">
                         <h3>Aesthetic Treatments</h3>
-                        <p style="color:#181818;">Advanced facial treatments and skin rejuvenation therapies for glowing skin.</p>
+                        <p>Advanced facial treatments and skin rejuvenation therapies for glowing skin.</p>
                         <div class="price">
                             <div class="amount">$150+</div>
                             <div class="type">Big Project</div>
@@ -1051,8 +1061,8 @@
                         <i class="fas fa-foot-prints"></i>
                     </div>
                     <div class="service-content">
-                        <h3>Nail Services</h3>
-                        <p style="color:#181818;">Premium foot care and nail treatments with relaxing massage and exfoliation.</p>
+                        <h3>Luxury Pedicure</h3>
+                        <p>Premium foot care and nail treatments with relaxing massage and exfoliation.</p>
                         <div class="price">
                             <div class="amount">$75+</div>
                             <div class="type">Small Project</div>
@@ -1068,7 +1078,7 @@
                     <div class="service-tag">New</div>
                     <div class="service-content">
                         <h3>Eyelash Extensions</h3>
-                        <p style="color:#181818;">Professional eyelash extensions for fuller, longer lashes that last for weeks.</p>
+                        <p>Professional eyelash extensions for fuller, longer lashes that last for weeks.</p>
                         <div class="price">
                             <div class="amount">$110+</div>
                             <div class="type">Medium Project</div>
@@ -1083,7 +1093,7 @@
                     </div>
                     <div class="service-content">
                         <h3>Eyebrow Embroidery</h3>
-                        <p style="color:#181818;">Semi-permanent eyebrow treatment for perfectly shaped and defined brows.</p>
+                        <p>Semi-permanent eyebrow treatment for perfectly shaped and defined brows.</p>
                         <div class="price">
                             <div class="amount">$180+</div>
                             <div class="type">Big Project</div>
@@ -1098,7 +1108,7 @@
                     </div>
                     <div class="service-content">
                         <h3>Slimming Treatment</h3>
-                        <p style="color:#181818;">Non-invasive body contouring and fat reduction treatments for a toned physique.</p>
+                        <p>Non-invasive body contouring and fat reduction treatments for a toned physique.</p>
                         <div class="price">
                             <div class="amount">$200+</div>
                             <div class="type">Big Project</div>
@@ -1108,18 +1118,18 @@
                 
                 <!-- Acupuncture -->
                 <div class="service-card">
-    <div class="service-icon hair">
-        <i class="fas fa-cut"></i>
-    </div>
-    <div class="service-content">
-        <h3>Hair Services</h3>
-        <p style="color:#181818;">Professional haircuts, coloring, blowouts, and styling delivered to your home.</p>
-        <div class="price">
-            <div class="amount">$65+</div>
-            <div class="type">Small Project</div>
-        </div>
-    </div>
-</div>
+                    <div class="service-icon acupuncture">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Acupuncture Therapy</h3>
+                        <p>Traditional Chinese medicine treatment for pain relief and overall wellness.</p>
+                        <div class="price">
+                            <div class="amount">$90+</div>
+                            <div class="type">Medium Project</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1129,7 +1139,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Book Your Service</h2>
-                <p style="color:#181818;">Select your service, date, and location to get started with our professionals</p>
+                <p>Select your service, date, and location to get started with our professionals</p>
             </div>
             
             <div class="booking-section">
@@ -1142,9 +1152,9 @@
                                 <option value="">Choose a service...</option>
                                 <option value="makeup">Professional Makeup</option>
                                 <option value="massage">Therapeutic Massage</option>
-                                <option value="hair">Hair Services</option>
+                                <option value="hair">Hair Styling</option>
                                 <option value="aesthetic">Aesthetic Treatments</option>
-                                <option value="pedicure">Nail Services</option>
+                                <option value="pedicure">Luxury Pedicure</option>
                                 <option value="eyelash">Eyelash Extensions</option>
                                 <option value="eyebrow">Eyebrow Embroidery</option>
                                 <option value="slimming">Slimming Treatment</option>
@@ -1383,7 +1393,9 @@
                         <li><a href="#"><i class="fas fa-arrow-right"></i> Massage Therapy</a></li>
                         <li><a href="#"><i class="fas fa-arrow-right"></i> Hair Services</a></li>
 <li><a href="#"><i class="fas fa-arrow-right"></i> Facial Treatment</a></li>
-<li><a href="#"><i class="fas fa-arrow-right"></i> Waxing and Threading</a></li>
+<li><a href="#"><i class="fas fa-arrow-right"></i> Waxing</a></li>
+<li><a href="#"><i class="fas fa-arrow-right"></i> Threading</a></li>
+<li><a href="#"><i class="fas fa-arrow-right"></i> Hair Styling</a></li>
                         <li><a href="#"><i class="fas fa-arrow-right"></i> Aesthetic Treatments</a></li>
                         <li><a href="#"><i class="fas fa-arrow-right"></i> Pedicure & Manicure</a></li>
                         <li><a href="#"><i class="fas fa-arrow-right"></i> Eyelash Extensions</a></li>
